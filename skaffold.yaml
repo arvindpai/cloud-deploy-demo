@@ -4,7 +4,7 @@ metadata:
   name: hello-cloudbuild-app
 build:
   artifacts:
-  - image: us-central1-docker.pkg.dev/gke-anthos-poc/my-repository/hello-cloudbuild
+  - image: us-central1-docker.pkg.dev/gke-anthos-poc/my-repository/hello-cloudbuild@sha256:5a5d3a72fbd74dc17db56918f5a8468c3ec46fdb30d8e0a67dc5738f9c47905a
     docker:
       dockerfile: Dockerfile
 deploy:
