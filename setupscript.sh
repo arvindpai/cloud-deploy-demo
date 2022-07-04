@@ -47,7 +47,7 @@ gcloud source repos create hello-cloudbuild-env
 
 #### CLONE A GITHUB REPOSITORY FOR THE HELLO-CLOUDBUILD-APP SOURCE CODE #### 
 cd ~
-git clone https://github.com/MaGilli81/gke-gitops-tutorial \
+git clone https://github.com/arvpai/gke-gitops-tutorial \
     hello-cloudbuild-app
 
 #### CONFIGURE HELLO-CLOUDBUILD-APP CSR REPO AS THE REMOTE #### 
@@ -140,7 +140,7 @@ git push google master
      --role=roles/container.developer
 
 #### REGISTER CLOUD DEPLOY DELIVERY PIPELINE ####
-cd ..
+cd ../cloud-deploy-demo
 gcloud deploy apply --file=delivery-pipeline.yaml --region=us-central1 && \
 gcloud deploy apply --file=target_dev.yaml --region=us-central1
 
