@@ -4,13 +4,12 @@ metadata:
   name: hello-cloudbuild-app
 build:
   artifacts:
-  - image: us-central1-docker.pkg.dev/google_cloud_project/my-repository/hello-cloudbuild
-    context: hello-cloudbuild-app
+  - image: us-central1-docker.pkg.dev/gke-anthos-poc/my-repository/hello-cloudbuild
     docker:
       dockerfile: Dockerfile
 deploy:
   kubectl:
     manifests:
     - delivery-pipeline.yaml
-    - target_dev.yaml
+   # - target_dev.yaml
     - hello-cloudbuild-app/kubernetes.yaml
