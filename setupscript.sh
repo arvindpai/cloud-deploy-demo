@@ -140,9 +140,9 @@ git push google master
      --role=roles/container.developer
 
 #### REGISTER CLOUD DEPLOY DELIVERY PIPELINE ####
-# cd ../cloud-deploy-demo
-# gcloud deploy apply --file=delivery-pipeline.yaml --region=us-central1 && \
-# gcloud deploy apply --file=target_dev.yaml --region=us-central1
+cd ../cloud-deploy-demo
+gcloud deploy apply --file=delivery-pipeline.yaml --region=us-central1 && \
+gcloud deploy apply --file=target_dev.yaml --region=us-central1
 
 #### CREATE A RELEASE FOR THE CLOUD DEPLOY DELIVERY PIPELINE ####
 gcloud deploy releases create my-release --delivery-pipeline=hello-cloudbuild-delivery-pipeline --region=us-central1
