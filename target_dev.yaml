@@ -12,5 +12,4 @@ deploy:
   kubectl:
     manifests:
     - delivery-pipeline.yaml
-    - target_dev.yaml
-    - hello-cloudbuild-app/kubernetes.yaml
+    - kubernetes.yaml
