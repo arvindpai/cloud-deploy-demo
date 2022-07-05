@@ -1,14 +1,9 @@
 apiVersion: skaffold/v2beta15
 kind: Config
 metadata:
-  name: hello-cloudbuild-app
-build:
-  artifacts:
-  - image: us-central1-docker.pkg.dev/gke-anthos-poc/my-repository/hello-cloudbuild@sha256:5a5d3a72fbd74dc17db56918f5a8468c3ec46fdb30d8e0a67dc5738f9c47905a
-    docker:
-      dockerfile: Dockerfile
+ name: hello-cloudbuild
 deploy:
-  kubectl:
-    manifests:
-    - delivery-pipeline.yaml
-    - kubernetes.yaml
+ kubectl:
+   manifests:
+   - k8s-manifests/deployment.yaml
+   - k8s-manifests/service.yaml
